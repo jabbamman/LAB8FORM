@@ -35,6 +35,7 @@
             this.txtAge = new System.Windows.Forms.TextBox();
             this.lblAge = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.lblresult = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Controls.Add(this.lblresult);
             this.groupBox1.Controls.Add(this.btnSubmit);
             this.groupBox1.Controls.Add(this.txtAge);
             this.groupBox1.Controls.Add(this.lblAge);
@@ -81,6 +83,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(368, 38);
             this.txtName.TabIndex = 1;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtAge
             // 
@@ -89,6 +92,7 @@
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(368, 38);
             this.txtAge.TabIndex = 3;
+            this.txtAge.TextChanged += new System.EventHandler(this.txtAge_TextChanged);
             // 
             // lblAge
             // 
@@ -109,6 +113,14 @@
             this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // lblresult
+            // 
+            this.lblresult.Location = new System.Drawing.Point(14, 155);
+            this.lblresult.Name = "lblresult";
+            this.lblresult.Size = new System.Drawing.Size(409, 43);
+            this.lblresult.TabIndex = 5;
             // 
             // Form1
             // 
@@ -121,6 +133,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LAB 8 FORM";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -137,6 +150,7 @@
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label lblresult;
     }
 }
 
